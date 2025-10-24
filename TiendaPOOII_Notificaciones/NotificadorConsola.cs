@@ -10,7 +10,9 @@ namespace TiendaPOOII_Notificaciones
     {
         public override void Enviar(string mensaje)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Notificación en consola: " + mensaje);
+            Console.ResetColor();
         }
     }
 }

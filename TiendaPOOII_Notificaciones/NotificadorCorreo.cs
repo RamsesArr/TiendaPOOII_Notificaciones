@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace TiendaPOOII_Notificaciones
 {
     internal class NotificadorCorreo : Notificador
     {
-      
+
         private string correoEmisor = "ramsesarroyo29@gmail.com";
         private string contrasena = "h u k m q s u s g p q f o v i v"; 
         private string smtpServidor = "smtp.gmail.com";
@@ -33,12 +36,12 @@ namespace TiendaPOOII_Notificaciones
 
                     cliente.Send(correo);
 
-                    Console.WriteLine("✅ Correo enviado exitosamente a " + correoReceptor);
+                    Console.WriteLine(" Correo enviado exitosamente a " + correoReceptor);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("❌ Error al enviar correo: " + ex.Message);
+                Console.WriteLine(" Error al enviar correo: " + ex.Message);
             }
         }
     }

@@ -67,24 +67,31 @@ namespace TiendaPOOII_Notificaciones
                         break;
 
                     case "3":
-                        correo.Enviar("Se ha enviado una notificación por correo.");
+                        Console.WriteLine("=== Sistema de Notificaciones Tienda POOII ===");
+                        Console.WriteLine("Enviando notificación por correo...");
+                        Notificador notificador = new NotificadorCorreo();
+                        string mensaje = "Tu pedido ha sido confirmado y está en proceso de envío.";
+                        notificador.Enviar(mensaje);
                         break;
 
                     case "4":
-                        consola.Enviar("Este es un mensaje de notificación en consola.");
+                        Console.WriteLine("=== Sistema de Notificaciones Tienda POOII ===");
+                        Notificador notificadores = new NotificadorConsola();
+                        string mensajes = "Tu pedido ha sido confirmado correctamente.";
+                        notificadores.Enviar(mensajes);
                         break;
 
                     case "5":
-                        log.Enviar("Se registró una notificación en log.txt.");
+                        log.Enviar("Tu pedido esta en camino.");
                         break;
 
                     case "6":
                         salir = true;
-                        Console.WriteLine("👋 Saliendo del sistema...");
+                        Console.WriteLine(" Saliendo del sistema...");
                         break;
 
                     default:
-                        Console.WriteLine("❌ Opción no válida. Intente nuevamente.");
+                        Console.WriteLine(" Opción no válida. Intente nuevamente.");
                         break;
                 }
             }
