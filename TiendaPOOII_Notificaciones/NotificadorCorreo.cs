@@ -17,7 +17,7 @@ namespace TiendaPOOII_Notificaciones
         private string smtpServidor = "smtp.gmail.com";
         private int puerto = 587;
         private bool usarSSL = true;
-        private string correoReceptor = "113161@alumnouninter.mx";
+        private string correoReceptor = "ramsesarroyo29@gmail.com";
 
         public override void Enviar(string mensaje)
         {
